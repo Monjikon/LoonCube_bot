@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  mclink-bot:
+    build: .
+    container_name: mclink-bot
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    env_file:
+      - bot/.env
+    volumes:
+      - ./data:/data
+    environment:
+      - DATABASE_PATH=/data/mclink.db
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

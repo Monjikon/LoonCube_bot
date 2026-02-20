@@ -1,0 +1,12 @@
+# Railway.app — отличная альтернатива BotHost
+# Бесплатно $5/месяц кредитов, не засыпает
+
+# Этот файл автоматически распознается Railway
+
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "cd bot && python main.py"
+healthcheckPath = "/"
+restartPolicyType = "ON_FAILURE"

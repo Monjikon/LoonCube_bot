@@ -1,0 +1,19 @@
+# MCLink Plugin Configuration
+
+api:
+  # Адрес Python бота (должен совпадать с API_HOST:API_PORT в .env)
+  url: "http://localhost:8080"
+  # Секретный ключ (должен совпадать с API_SECRET в .env)
+  secret: "change_me_very_secret_key_123"
+  # Таймаут запроса в секундах
+  timeout: 5
+
+messages:
+  prefix: "&8[&bMCLink&8] "
+  code_generated: "&aТвой код привязки: &e{code} &7(действует 10 минут)"
+  code_hint: "&7Введи его в Telegram/VK боте командой: &flink {code}"
+  already_linked: "&cАккаунт уже привязан к {platform}!"
+  not_linked: "&cАккаунт не привязан."
+  link_status: "&aПривязан к &e{platform} &a(с {date})"
+  unlinked: "&aАккаунт успешно отвязан."
+  error: "&cОшибка при обращении к боту. Попробуй позже."
